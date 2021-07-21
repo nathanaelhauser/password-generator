@@ -25,8 +25,11 @@ function getRandomSpecialChar(){
   return SpecialChar[Math.floor(Math.random()*SpecialChar.length)];
 }
 
+
+
 var generatePassword= function(){
   var password="";
+  var passwordBin="";
   var passwordLength = window.prompt("How many character do you want for your password? Pick a number from 8-128");
   passwordLength = parseInt (passwordLength);
   
@@ -53,25 +56,25 @@ var generatePassword= function(){
   for(i=0;i<passwordLength && passwordChar<passwordLength;i++ ) {
       //add lowercase if confirmed yes
       if(wantLowerCase){
-        password= getRandomLower()+ password;
+        passwordBin= getRandomLower()+ passwordBin;
         passwordChar++;
       }
 
       //add uppercase if confirmed yes
       if(wantUpperCase){
-        password= getRandomUpper()+ password;
+        passwordBin= getRandomUpper()+ passwordBin;
         passwordChar++;
       }
 
       //add numeric character if confirmed yes
       if(wantNumerChar){
-        password= getRandomNumber()+ password;
+        passwordBin= getRandomNumber()+ passwordBin;
         passwordChar++;
       }
 
       //add lowercase if confirmed yes
       if(wantSpecialChar){
-        password= getRandomSpecialChar()+ password;
+        passwordBin= getRandomSpecialChar()+ passwordBin;
         passwordChar++;
       }
     }}
@@ -79,7 +82,18 @@ var generatePassword= function(){
       window.alert("You need to pick at least one requirement for your password! Please try again!");
       generatePassword();
     }
+
+    function getRandom (){
+      return passwordBin[Math.floor(Math.random()*passwordBin.length)];
+    }
+
+  for (t=0; t<passwordLength; t++){
+    password= password+ getRandom();
+    
+  }
+
     return password;
+
 
 
   }

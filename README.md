@@ -5,7 +5,7 @@
  You will have a choice to include lowercases, uppercasses, numeric characters and special characters in your randomized password
 
  1. First, you will have to choose the length of your password. You can pick any length between 8-128
- ![choose length](/pictures/picklength.jpg)
+ ![choose length](./pictures/picklength.jpg)
 
  2. Second, you can choose to add lowercases to you password
  ![choose lowercase](/pictures/picklowercase.jpg)

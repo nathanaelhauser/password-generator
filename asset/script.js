@@ -53,29 +53,29 @@ var generatePassword= function(){
   //If password need to contain a special character
   var wantSpecialChar= confirm ("Do you want special character in your password?  ");
   if(wantLowerCase || wantUpperCase || wantNumerChar || wantSpecialChar) {
-  for(i=0;i<passwordLength && passwordChar<passwordLength;i++ ) {
+  for(i=0;i<passwordLength ;i++ ) {
       //add lowercase if confirmed yes
       if(wantLowerCase){
         passwordBin= getRandomLower()+ passwordBin;
-        passwordChar++;
+        
       }
 
       //add uppercase if confirmed yes
       if(wantUpperCase){
         passwordBin= getRandomUpper()+ passwordBin;
-        passwordChar++;
+        
       }
 
       //add numeric character if confirmed yes
       if(wantNumerChar){
         passwordBin= getRandomNumber()+ passwordBin;
-        passwordChar++;
+        
       }
 
       //add lowercase if confirmed yes
       if(wantSpecialChar){
         passwordBin= getRandomSpecialChar()+ passwordBin;
-        passwordChar++;
+        
       }
     }}
     else{
